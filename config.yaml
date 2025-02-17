@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: vaultka
+networks:
+- id: 42161
+  start_block: 0
+  contracts:
+  - name: TransparentUpgradeableProxy
+    address:
+    - 0x9045ae36f963b7184861BDce205ea8B08913B48c
+    handler: src/EventHandlers.ts
+    events:
+    - event: AdminChanged(address previousAdmin, address newAdmin)
+    - event: AllowedVault(address indexed vault, bool status)
+    - event: Approval(address indexed owner, address indexed spender, uint256 value)
+    - event: BeaconUpgraded(address indexed beacon)
+    - event: Deposit(address indexed sender, address indexed owner, uint256 assets, uint256 shares)
+    - event: Deposited(address caller, address receiver, uint256 assets, uint256 shares, uint256 timestamp, uint256 utilRate)
+    - event: Initialized(uint8 version)
+    - event: Lend(address indexed user, uint256 amount)
+    - event: LockTimeChanged(uint256 lockTime)
+    - event: OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+    - event: ProtocolFeeChanged(uint256 newwithdrawalFees)
+    - event: ProtocolFeeReceiverChanged(address newFeeReceiver)
+    - event: RepayDebt(address indexed user, uint256 debtAmount, uint256 amountPaid)
+    - event: SetUtilsRate(uint256 utilRate)
+    - event: Transfer(address indexed from, address indexed to, uint256 value)
+    - event: USDCGifterAllowed(address indexed gifter, bool status)
+    - event: Upgraded(address indexed implementation)
+    - event: Withdraw(address indexed sender, address indexed receiver, address indexed owner, uint256 assets, uint256 shares)
+    - event: Withdrawn(address caller, address receiver, address owner, uint256 assets, uint256 shares, uint256 timestamp, uint256 utilRate)
+rollback_on_reorg: false

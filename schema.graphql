@@ -1,0 +1,124 @@
+type TransparentUpgradeableProxy_AdminChanged {
+  id: ID!
+  previousAdmin: String!
+  newAdmin: String!
+}
+
+type TransparentUpgradeableProxy_AllowedVault {
+  id: ID!
+  vault: String!
+  status: Boolean!
+}
+
+type TransparentUpgradeableProxy_Approval {
+  id: ID!
+  owner: String!
+  spender: String!
+  value: BigInt!
+}
+
+type TransparentUpgradeableProxy_BeaconUpgraded {
+  id: ID!
+  beacon: String!
+}
+
+type TransparentUpgradeableProxy_Deposit {
+  id: ID!
+  sender: String!
+  owner: String!
+  assets: BigInt!
+  shares: BigInt!
+}
+
+type TransparentUpgradeableProxy_Deposited {
+  id: ID!
+  caller: String!
+  receiver: String!
+  assets: BigInt!
+  shares: BigInt!
+  timestamp: BigInt!
+  utilRate: BigInt!
+}
+
+type TransparentUpgradeableProxy_Initialized {
+  id: ID!
+  version: BigInt!
+}
+
+type TransparentUpgradeableProxy_Lend {
+  id: ID!
+  user: String!
+  amount: BigInt!
+}
+
+type TransparentUpgradeableProxy_LockTimeChanged {
+  id: ID!
+  lockTime: BigInt!
+}
+
+type TransparentUpgradeableProxy_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+}
+
+type TransparentUpgradeableProxy_ProtocolFeeChanged {
+  id: ID!
+  newwithdrawalFees: BigInt!
+}
+
+type TransparentUpgradeableProxy_ProtocolFeeReceiverChanged {
+  id: ID!
+  newFeeReceiver: String!
+}
+
+type TransparentUpgradeableProxy_RepayDebt {
+  id: ID!
+  user: String!
+  debtAmount: BigInt!
+  amountPaid: BigInt!
+}
+
+type TransparentUpgradeableProxy_SetUtilsRate {
+  id: ID!
+  utilRate: BigInt!
+}
+
+type TransparentUpgradeableProxy_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  value: BigInt!
+}
+
+type TransparentUpgradeableProxy_USDCGifterAllowed {
+  id: ID!
+  gifter: String!
+  status: Boolean!
+}
+
+type TransparentUpgradeableProxy_Upgraded {
+  id: ID!
+  implementation: String!
+}
+
+type TransparentUpgradeableProxy_Withdraw {
+  id: ID!
+  sender: String!
+  receiver: String!
+  owner: String!
+  assets: BigInt!
+  shares: BigInt!
+}
+
+type TransparentUpgradeableProxy_Withdrawn {
+  id: ID!
+  caller: String!
+  receiver: String!
+  owner: String!
+  assets: BigInt!
+  shares: BigInt!
+  timestamp: BigInt!
+  utilRate: BigInt!
+}
+
